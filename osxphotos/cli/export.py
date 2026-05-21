@@ -2383,6 +2383,7 @@ def export_photo(
     export_raw=None,
     skip_raw_jpeg=False,
     album_keyword=None,
+    applescript_timeout=120,
     person_keyword=None,
     keyword_template=None,
     description_template=None,
@@ -2613,6 +2614,7 @@ def export_photo(
 
             orig_export = export_photo_to_directory(
                 album_keyword=album_keyword,
+                applescript_timeout=applescript_timeout,
                 convert_to_jpeg=convert_to_jpeg,
                 description_template=description_template,
                 dest_path=dest_path,
@@ -2753,6 +2755,7 @@ def export_photo(
 
                 results += export_photo_to_directory(
                     album_keyword=album_keyword,
+                    applescript_timeout=applescript_timeout,
                     convert_to_jpeg=convert_to_jpeg,
                     description_template=description_template,
                     dest_path=dest_path,
@@ -2847,6 +2850,7 @@ def _render_suffix_template(
 
 def export_photo_to_directory(
     album_keyword,
+    applescript_timeout,
     convert_to_jpeg,
     description_template,
     dest_path,
